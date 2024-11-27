@@ -1,0 +1,9 @@
+
+X	java:S125$"<This block of commented-out lines of code should be removed.(Õ£¿8áÕ¾¢¶2
+P
+java:S19050"4Remove this unnecessary cast to "CompletableFuture".(Š•ÚO8Õ£¿¢¶2
+H
+java:S16022",Remove useless curly braces around statement(€àÑ8şù¾¢¶2
+{
+java:S1128
+"YRemove this unused import 'org.springframework.util.concurrent.ListenableFutureCallback'.(Áµæûÿÿÿÿ8Ø£¿¢¶2

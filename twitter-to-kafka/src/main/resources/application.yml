@@ -1,0 +1,40 @@
+twitter-to-kafka:
+  twitter-keywords:
+    - Java
+    - Microservices
+    - Spring
+    - Kafka
+    - Elasticsearch
+  enable-mock-tweets: true
+  mock-min-tweet-length: 5
+  mock-max-tweet-length: 15
+  mock-sleep-ms: 10000
+
+retry-config:
+  initial-interval-ms: 1000
+  max-interval-ms: 10000
+  multiplier: 2.0
+  max-attempt: 3
+  sleep-time-ms: 2000
+
+kafka-config:
+
+  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  schema-registry-url-key: schema.registry.url
+  schema-registry-url: http://localhost:8081
+  topic-name: twitter-topic
+  topic-name-to-create:
+    - twitter-topic
+  number-of-partition: 3
+  replication-factor: 3
+
+kafka-producer-config:
+  key-serializaer-class: org.apache.kafka.common.serialization.LongSerializer
+  value-serializer-class: io.confluent.kafka.serializers.KafkaAvroSerializer
+  compression-type: snappy
+  acks: all
+  linger-ms: 5
+  batch-size: 16384
+  batch-size-boost-factor: 100
+  request-timeout-ms: 60000
+  retry-count: 5

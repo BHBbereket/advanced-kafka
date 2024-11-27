@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="app-config" />
+        <module name="kafka-admin" />
+        <module name="twitter-to-kafka" />
+        <module name="kafka-model" />
+        <module name="kafka" />
+        <module name="kafka-producer" />
+        <module name="common-config" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="app-config" options="-parameters" />
+      <module name="common-config" options="-parameters" />
+      <module name="kafka" options="-parameters" />
+      <module name="kafka-admin" options="-parameters" />
+      <module name="kafka-model" options="-parameters" />
+      <module name="kafka-producer" options="-parameters" />
+      <module name="twitter-to-kafka" options="-parameters" />
+    </option>
+  </component>
+</project>
